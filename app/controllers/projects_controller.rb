@@ -44,7 +44,9 @@ class ProjectsController < ApplicationController
         @type << it
       end
       
-      html_doc.css('ul').css('li').css('a').css('img').each do |it|
+      html_doc.css('ul').css('li').css('div.photo').css('img').each do |it|
+        it = it.attribute('src')
+        #앞뒤에 img src <> 이거 삭제한다.
         @picture << it
       end
       
