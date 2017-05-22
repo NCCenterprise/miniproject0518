@@ -1,0 +1,21 @@
+<h1>Projects#index</h1>
+<p>Find me in app/views/projects/index.html.erb</p>
+
+제품명<br>
+<% @items.each do |product| %>
+    <%= product.text %><br>
+<% end %>
+
+<br><hr><br>
+가격<br>
+<% @prices.each do |price| %>
+    <%= price.text %><br>
+<% end %>
+
+<br><hr><br>
+행사타입<br>
+<% @type.each do |type| %>
+    <%= type.text %><br>
+<% end %>
+
+<!--상품 사진, 상품 이름, 가격, 1+1인지 2+1인지-->
