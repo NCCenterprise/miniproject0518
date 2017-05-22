@@ -20,6 +20,7 @@ class ProjectsController < ApplicationController
     @items = []
     @prices = []
     @type = []
+    @picture = []
     
     # 가격, 행사타입, 이미지 별 리스트 만들어서 리스트 어펜드하기
     
@@ -41,6 +42,10 @@ class ProjectsController < ApplicationController
       
       html_doc.css('ul').css('li').css('ul').css('li').each do |it|
         @type << it
+      end
+      
+      html_doc.css('ul').css('li').css('a').css('img').each do |it|
+        @picture << it
       end
       
     end

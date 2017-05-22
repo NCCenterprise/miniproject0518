@@ -1,6 +1,13 @@
 <h1>Projects#index</h1>
 <p>Find me in app/views/projects/index.html.erb</p>
 
+img src<br>
+<% @picture.each do |product| %>
+    <%= product %><br>
+<% end %>
+
+<br><hr><br>
+
 제품명<br>
 <% @items.each do |product| %>
     <%= product.text %><br>
